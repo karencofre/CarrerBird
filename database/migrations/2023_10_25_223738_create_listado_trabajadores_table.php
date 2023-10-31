@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('listado_trabajadores', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('puntuacion')->nullable();
         });
     }
 
