@@ -25,6 +25,10 @@ Route::get('/curr',function(){
     return view('curriculums');
 })->name('curr');
 
-Route::get('perfil',function(){
+Route::get('/perfil',function(){
     return view('perfil');
 })->name('perfil');
+
+Route::get('/solicitud',function(){
+    return view('solicitudes');
+})->name('solicitudes');

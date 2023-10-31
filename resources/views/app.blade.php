@@ -34,15 +34,73 @@
         <hr>
     @yield('content')
 
+
+    <div class="container">
+        <section class="mt-5">
+            <h2 class="text-center">Colaboradores</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="colaborador1.jpg" class="card-img-top" alt="Colaborador 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Colaborador 1</h5>
+                            <p class="card-text">Descripción o rol del colaborador 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="colaborador2.jpg" class="card-img-top" alt="Colaborador 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Colaborador 2</h5>
+                            <p class="card-text">Descripción o rol del colaborador 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="colaborador3.jpg" class="card-img-top" alt="Colaborador 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Colaborador 3</h5>
+                            <p class="card-text">Descripción o rol del colaborador 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+<hr>
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">
-          <div class="row">
-            <div class="col">
-              <p>&copy; 2023 CarrerBird</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Redes Sociales</h5>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://github.com/karencofre" class="text-light mx-2" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/karen-cofre-cejas" class="text-light mx-2" target="_blank">LinkedIn</a>
+                        <a href="https://www.instagram.com/neural_tutor" class="text-light mx-2" target="_blank">Instagram</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <p>
+                        <strong>Teléfono:</strong> +123 456 789<br>
+                        <strong>Correo:</strong> ejemplo@example.com
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Navegacion</h5>
+                    <nav class="nav justify-content-center">
+                        <a class="nav-link text-light" href="{{route('index')}}">Inicio</a>
+                        <a class="nav-link text-light" href="{{route('perfil')}}">Perfil</a>
+                        <a class="nav-link text-light" href="{{route('solicitudes')}}">Solicitudes</a>
+                    </nav>
+                </div>
             </div>
-          </div>
         </div>
+
       </footer>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
