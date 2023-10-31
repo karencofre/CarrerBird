@@ -16,6 +16,13 @@ return new class extends Migration
         Schema::create('trabajadors', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nombre')->nullable();
+            $table->string('apellido')->nullable();
+            $table->string('correo')->nullable();
+            $table->string('cargo')->nullable();
+            $table->string('url_foto')->nullable();
+            $table->integer('puntuacion')->nullable();
+            $table->text('acerca_de')->nullable();
         });
     }
 
