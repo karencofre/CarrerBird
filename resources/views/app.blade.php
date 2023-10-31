@@ -17,13 +17,13 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Login</a>
+                <a class="nav-link text-white" href="{{route('login')}}">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Perfil</a>
+                <a class="nav-link text-white" href="{{route('perfil')}}">Perfil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Curriculums</a>
+                <a class="nav-link text-white" href="{{route('curr')}}">Curriculums</a>
               </li>
             </ul>
 
