@@ -19,18 +19,25 @@ class ContratistaController extends Controller
     }
 
     public function show(){
-
+        $contratista = Contratista::find($id);
+        return view('contratista.show', ['contratista',$contratista]);
     }
 
-    public function edit(){
-
+    public function edit(string $id){
+        $contratista = Contratista::find($id);
+        return view('contratista.edit', ['contratista',$contratista]);
     }
 
-    public function update(){
-
+    public function update(Request $request,string $id){
+        $contratista = Contratista::find($id);
+        $contratista->fill($request->all());
+        $contratista->save();
+        return redirect()->route('contratista.index')->with('success', 'Contratista actualizado correctamente');
     }
 
-    public function destroy(){
-
+    public function destroy(string $id){
+        $contratista = Contratista::find($id);
+        $contratista->delete();
+        return redirect()->route('contratista.index')->with('success', 'Contratista eliminado correctamente');
     }
 }
