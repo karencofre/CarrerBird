@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CarrerBird</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cosmo/bootstrap.min.css" integrity="sha384-5QFXyVb+lrCzdN228VS3HmzpiE7ZVwLQtkt+0d9W43LQMzz4HBnnqvVxKg6O+04d" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-dark text-white text-center py-3">
@@ -30,12 +32,16 @@
           </div>
         </div>
       </nav>
-    <h1 class="text-center">Bienvenido a carrer bird tu lugar para contratar y encontrar trabajo</h1>
-        <hr>
+
+
+      <div class="hero bg-primary text-white text-center mb-5">
+      </div>
+<h1 class="text-center my-5 text-black">CarrerBird</h1>
+
     @yield('content')
 
 
-    <div class="container">
+    <div class="container-fluid bg-dark">
         <section class="mt-5">
             <h2 class="text-center">Colaboradores</h2>
             <div class="row">
@@ -69,7 +75,6 @@
             </div>
         </section>
     </div>
-<hr>
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">
             <div class="row">

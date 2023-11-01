@@ -13,4 +13,24 @@ class ContratistaController extends Controller
         return redirect()->route('contratista.index')->with('success', 'Contratista creado correctamente');
     }
 
+    public function index(){
+        $contratistas = Contratista::all();
+        return view('contratista.index', ['contratistas',$contratistas]);
+    }
+
+    public function show(){
+
+    }
+
+    public function edit(){
+
+    }
+
+    public function update(){
+
+    }
+
+    public function destroy(){
+
+    }
 }
