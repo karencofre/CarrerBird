@@ -40,4 +40,8 @@ class FormacionController extends Controller
         $formacion->delete();
         return redirect()->route('formacion.index')->with('success', 'Formacion eliminado correctamente');
     }
+
+    public function create(){
+        return view('formacion.create');
+    }
 }
