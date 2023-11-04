@@ -23,6 +23,12 @@ return new class extends Migration
             $table->string('url_foto')->nullable();
             $table->integer('puntuacion')->nullable();
             $table->text('acerca_de')->nullable();
+            $table->unsignedBigInteger('trabajo_id')->nullable();
+            $table->unsignedBigInteger('formacion_id')->nullable();
+
+            $table->foreign('trabajo_id')->references('id')->on('trabajos');
+            $table->foreign('formacion_id')->references('id')->on('formacions');
+
         });
     }
 

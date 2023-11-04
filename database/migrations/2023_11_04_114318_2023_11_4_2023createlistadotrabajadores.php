@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('puntuacion')->nullable;
+            $table->unsignedBigInteger('trabajador_id')->nullable();
+            $table->foreign('trabajador_id')->references('id')->on('trabajadors');
         });
     }
 
