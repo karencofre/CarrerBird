@@ -40,4 +40,8 @@ class ContratistaController extends Controller
         $contratista->delete();
         return redirect()->route('contratista.index')->with('success', 'Contratista eliminado correctamente');
     }
+
+    public function create(){
+        return view('contratista.create');
+    }
 }
