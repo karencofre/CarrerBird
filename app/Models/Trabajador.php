@@ -10,16 +10,16 @@ class Trabajador extends Model
     use HasFactory;
 
     protected $fillable = [
+        'idd',
         'nombre',
-        'apellidos',
-        'dni',
-        'direccion',
-        'telefono',
-        'email',
-        'fecha_nacimiento',
-        'fecha_contratacion',
-        'fecha_baja',
-        'observaciones',
+        'apellido',
+        'correo',
+        'cargo',
+        'url_foto',
+        'puntuacion',
+        'acerca_de',
+        'trabajado_id',
+        'formacion_id',
     ];
 
     public function formaciones(){

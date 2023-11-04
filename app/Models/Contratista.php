@@ -10,13 +10,7 @@ class Contratista extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
-        'cif',
-        'direccion',
-        'telefono',
-        'email',
-        'contacto',
-        'observaciones',
+        'id'
     ];
 
 }

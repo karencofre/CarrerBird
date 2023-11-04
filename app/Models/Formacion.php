@@ -10,13 +10,10 @@ class Formacion extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
-        'tipo',
-        'fecha_inicio',
-        'fecha_fin',
-        'horas',
-        'centro',
-        'observaciones',
+        'id',
+        'nombre_formacion',
+        'lugar_formacion',
+        'grado_formacion',
     ];
 
     public function trabajador(){

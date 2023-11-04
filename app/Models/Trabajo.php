@@ -10,13 +10,10 @@ class Trabajo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
-        'tipo',
-        'fecha_inicio',
-        'fecha_fin',
-        'horas',
-        'centro',
-        'observaciones',
+        'id',
+        'nombre_trabajo',
+        'fecha_inicio_trabajo',
+        'fecha_fin_trabajo',
     ];
 
     public function trabajador(){

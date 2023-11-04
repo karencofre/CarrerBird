@@ -10,16 +10,9 @@ class ListadoTrabajadores extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
-        'apellidos',
-        'dni',
-        'direccion',
-        'telefono',
-        'email',
-        'fecha_nacimiento',
-        'fecha_contratacion',
-        'fecha_baja',
-        'observaciones',
+        'id',
+        'puntuacion',
+        'trabajador_id',
     ];
 
     public function trabajadores(){
