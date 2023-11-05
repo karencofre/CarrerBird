@@ -23,12 +23,12 @@ Route::get('/login',function(){
 
 Route::get('/curr',function(){
     return view('curriculums');
-})->name('curr');
+})->name('curr')->middleware('auth');
 
 Route::get('/perfil',function(){
     return view('perfil');
-})->name('perfil');
+})->name('perfil')->middleware('auth');
 
 Route::get('/solicitud',function(){
     return view('solicitudes');
-})->name('solicitudes');
+})->name('solicitudes')->middleware('auth');
