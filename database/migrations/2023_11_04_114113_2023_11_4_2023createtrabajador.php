@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nombre')->nullable();
             $table->string('apellido')->nullable();
             $table->string('correo')->nullable();
+            $table->string('renta')->nullable();
             $table->string('cargo')->nullable();
             $table->string('url_foto')->nullable();
             $table->integer('puntuacion')->nullable();
