@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header text-center">Bienvenido</div>
                 <div class="card-body">
-                    <form method="POST" action="{{route('login')}}">
+                    <form method="POST" action="{{route('login.post')}}">
                         @csrf
                         @if (session('success'))
                      <h2 class="alert alert-success ">

@@ -23,7 +23,7 @@ use App\Http\Controllers\RegistroController;
 Route::get('/', function () {
     return view('index');
 })->name('index');
-Route::post('/login', [LoginController::class,'login'])->name('login');
+Route::post('/login', [LoginController::class,'login'])->name('login.post');
 Route::get('/login', function () {
     return view('login');
 })->name('login.index');
@@ -33,7 +33,7 @@ Route::get('/signup', function(){
 Route::post('/signup', [LoginController::class,'register']);
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 
-Route::get('/curr',[TrabajadorController::class,'index'])->name('curr')->middleware('auth');
+Route::get('/curr',[TrabajadorController::class,'index'])->name('curr');
 Route::post('/perfil',[TrabajadorController::class,'store'])->name('perfil');
 Route::get('/perfil', function(){
     return view('perfil');
