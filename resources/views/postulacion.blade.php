@@ -4,7 +4,7 @@
 
 <div class="container">
     <h1 class="my-4">Build Your CV</h1>
-    <form>
+    <form action="">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -43,6 +43,11 @@
 
     <form action="">
         <div class="mb-3">
+            <label for="id_trabajador_f" class="form-label">ID de Trabajador</label>
+            <input type="text" class="form-control" id="id_trabajador_f" name="id_trabajador_f">
+        </div>
+        <div class="mb-3">
+
             <h2>Formacion Academica:</h2>
             <label for="institucion" class="form-label">Institucion</label>
             <input type="text" class="form-control" id="institucion" name="institucion">
@@ -64,7 +69,12 @@
 
     <form action="">
         <div class="mb-3">
+            <label for="id_trabajador_e" class="form-label">ID de Trabajador</label>
+            <input type="text" class="form-control" id="id_trabajador_e" name="id_trabajador_e">
+        </div>
+        <div class="mb-3">
             <h2>Experiencia Laboral:</h2>
+
             <label for="cargo" class="form-label">Cargo</label>
             <input type="text" class="form-control" id="cargo" name="cargo">
             <label for="fecha_inicio_e" class="form-label">Fecha de inicio</label>
