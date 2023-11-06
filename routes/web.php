@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/login',function(){
+Route::post('/login',function(){
     return view('login');
 })->name('login');
 
@@ -32,3 +32,8 @@ Route::get('/perfil',function(){
 Route::get('/solicitud',function(){
     return view('solicitudes');
 })->name('solicitudes')->middleware('auth');
+
+
+Route::get('/postulacion',function(){
+    return view('postulacion');
+})->name('postulacion')->middleware('auth');

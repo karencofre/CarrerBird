@@ -27,6 +27,9 @@
               <li class="nav-item">
                 <a class="nav-link text-white" href="{{route('curr')}}">Curriculums</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{{route('postulacion')}}">Postulaciones</a>
+              </li>
             </ul>
 
           </div>
