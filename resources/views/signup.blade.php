@@ -27,7 +27,7 @@
                         @csrf
                         <div class="form-group">
                             <label for="id_trabajador">Id Trbajador</label>
-                            <input type="text" class="form-control" id="id_trabajador" name="id_trababajdor" required>
+                            <input type="text" class="form-control" id="id_trabajador" name="id_trabajador" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Correo Electrónico</label>

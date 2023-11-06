@@ -17,7 +17,12 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('login.index')}}">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('postulacion')}}">Register</a>
+                  </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="{{route('perfil')}}">Perfil</a>
               </li>
@@ -98,7 +103,6 @@
                     <nav class="nav justify-content-center">
                         <a class="nav-link text-light" href="{{route('index')}}">Inicio</a>
                         <a class="nav-link text-light" href="{{route('perfil')}}">Perfil</a>
-                        <a class="nav-link text-light" href="{{route('solicitudes')}}">Solicitudes</a>
                     </nav>
                 </div>
             </div>

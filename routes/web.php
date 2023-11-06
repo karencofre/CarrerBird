@@ -23,31 +23,29 @@ use App\Http\Controllers\RegistroController;
 Route::get('/', function () {
     return view('index');
 })->name('index');
-
-/*
-Route::get('/login', function(){
+Route::post('/login', [LoginController::class,'login'])->name('login');
+Route::get('/login', function () {
     return view('login');
-})->name('login');
-Route::post('/login', [LoginController::class,'login']);
+})->name('login.index');
 Route::get('/signup', function(){
     return view('signup');
 })->name('signup');
 Route::post('/signup', [LoginController::class,'register']);
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
-*/
 
-Route::get('/curr',[TrabajadorController::class,'index'])->name('curr');
+Route::get('/curr',[TrabajadorController::class,'index'])->name('curr')->middleware('auth');
 Route::post('/perfil',[TrabajadorController::class,'store'])->name('perfil');
 Route::get('/perfil', function(){
     return view('perfil');
 });
-
+/*
 Route::get('/solicitud',function(){
     return view('solicitudes');
-})->name('solicitudes');
+})->name('solicitudes');*/
 Route::get('/postulacion',function(){
     return view('postulacion');
 })->name('postulacion');
+
 
 Route::resource('formacion', FormacionController::class);
 Route::resource('trabajo', TrabajoController::class);

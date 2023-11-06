@@ -10,7 +10,10 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 
 class LoginController extends Controller
 {
-
+    public function index()
+    {
+        return view('login');
+    }
 public function register(Request $req){
     $trabajador = new Trabajador();
     $trabajador->id_trabajador = $req->input('id_trabajador');
@@ -23,7 +26,7 @@ public function register(Request $req){
 
     Auth::login($trabajador);
 
-    return redirect(route('/'));
+    return redirect(route('index'));
 }
 
     public function logout(Request $req){
@@ -38,7 +41,6 @@ public function register(Request $req){
         $credentials = [
             'correo' => $req->input('correo'),
             'password' => $req->input('password'),
-            'active' => '1',
 
         ];
 
@@ -46,7 +48,7 @@ public function register(Request $req){
 
         if(Auth::attempt($credentials,$remember)){
             $req->session()->regenerate();
-            return redirect(route('index'));
+            return redirect(route('curr'));
         }else{
             redirect(route('index'));
         }
