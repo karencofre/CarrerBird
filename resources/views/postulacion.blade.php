@@ -11,21 +11,24 @@
             <input type="text" class="form-control" id="name" placeholder="Enter your name">
         </div>
         <div class="mb-3">
+            <label for="lastname" class="form-label">
+                Last Name</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Enter your last name">
+        </div>
+        <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" placeholder="Enter your email">
         </div>
         <div class="mb-3">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password">
         </div>
+
         <div class="mb-3">
             <label for="acercaDe">Cuéntanos acerca de ti:</label>
             <textarea class="form-control" id="acercaDe" name="acercaDe" rows="5"></textarea>
         </div>
-        <div class="mb-3">
-            <label for="cv" class="form-label">Upload Your CV</label>
-            <input class="form-control" type="file" id="cv">
-        </div>
+
 
 
         <div class="mb-3">
@@ -44,15 +47,23 @@
 
     <form action="">
         <div class="mb-3">
+            @php
+            use App\Models\Trabajador;
+            $trabajadores = Trabajador::all();
 
+
+            @endphp
                 <label for="miSelect">Selecciona una trabajador:</label>
                 <select class="form-control" id="miSelect">
-                    <option value="opcion1">Opción 1</option>
+                    @foreach($trabajadores as $trabajador)
+        <option value="{{ $trabajador->trabajador_id }}">{{ $trabajador->nombre . $trabajador->appellido}}</option>
+    @endforeach
                 </select>
+
+
 
         </div>
         <div class="mb-3">
-
             <h2>Formacion Academica:</h2>
             <label for="institucion" class="form-label">Institucion</label>
             <input type="text" class="form-control" id="institucion" name="institucion">
@@ -74,10 +85,18 @@
 
     <form action="">
         <div class="mb-3">
-            <label for="miSelect">Selecciona una trabajador:</label>
-            <select class="form-control" id="miSelect">
-                <option value="opcion1">Opción 1</option>
-            </select>
+            @php
+
+            $trabajadores = Trabajador::all();
+
+
+            @endphp
+                <label for="miSelect">Selecciona una trabajador:</label>
+                <select class="form-control" id="miSelect2">
+                    @foreach($trabajadores as $trabajador)
+        <option value="{{ $trabajador->trabajador_id }}">{{ $trabajador->nombre . $trabajador->appellido}}</option>
+    @endforeach
+                </select>
         </div>
         <div class="mb-3">
             <h2>Experiencia Laboral:</h2>
