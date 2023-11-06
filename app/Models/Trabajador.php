@@ -17,6 +17,7 @@ class Trabajador extends Model implements AuthContract
 
         'correo',
         'password',
+        'trabajador_id',
     ];
     protected $hidden = [
         'password',

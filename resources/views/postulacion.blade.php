@@ -4,32 +4,31 @@
 
 <div class="container">
     <h1 class="my-4">Build Your CV</h1>
-    <form action="">
+    <form action="{{route('trabajador.store')}}" method="POST">
         @csrf
+
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            <label for="nombre" class="form-label">Name</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter your name">
         </div>
         <div class="mb-3">
-            <label for="lastname" class="form-label">
+            <label for="apellido" class="form-label">
                 Last Name</label>
-            <input type="text" class="form-control" id="lastname" placeholder="Enter your last name">
+            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Enter your last name">
         </div>
         <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            <label for="correo" class="form-label">Email</label>
+            <input type="email" class="form-control" id="correo" name="correo" placeholder="Enter your email">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
         </div>
 
         <div class="mb-3">
             <label for="acercaDe">Cuéntanos acerca de ti:</label>
             <textarea class="form-control" id="acercaDe" name="acercaDe" rows="5"></textarea>
         </div>
-
-
 
         <div class="mb-3">
             <h2>Expectativa de renta:</h2>
@@ -45,7 +44,7 @@
 
     </form>
 
-    <form action="">
+    <form action="{{route('formacion.store')}}" method="POST">
         <div class="mb-3">
             @php
             use App\Models\Trabajador;
@@ -83,7 +82,7 @@
 
     </form>
 
-    <form action="">
+    <form action="{{route('trabajo.store')}}" method="POST">
         <div class="mb-3">
             @php
 

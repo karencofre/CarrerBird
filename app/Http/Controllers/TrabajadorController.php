@@ -10,8 +10,18 @@ class TrabajadorController extends Controller
     //
     public function store(Request $request){
         $trabajador = new Trabajador();
+
+
+        $trabajador->active = 1;
+        $trabajador->nombre = $request->nombre;
+        $trabajador->apellido = $request->apellido;
+        $trabajador->correo = $request->correo;
+        $trabajador->password = $request->password;
+        $trabajador->acerca_de = $request->acercaDe;
+        $trabajador->renta = $request->expectativa;
+
         $trabajador->save();
-        return redirect()->route('curriculums')->with('success', 'Trabajador creado correctamente');
+        return redirect()->route('index')->with('success', 'Trabajador creado correctamente');
     }
 
     public function index(){

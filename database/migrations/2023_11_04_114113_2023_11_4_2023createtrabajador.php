@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('trabajadors', function (Blueprint $table) {
-            $table->bigInteger('trabajador_id')->primary();
+            $table->id();
             $table->timestamps();
             $table->integer('active')->nullable();
             $table->string('nombre')->nullable();
