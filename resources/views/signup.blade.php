@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header text-center">Bienvenido</div>
+                <div class="card-header text-center">Registrarse</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @if (session('success'))
@@ -32,13 +32,12 @@
                             <label for="password">Contraseña</label>
                             <input type="password" class="form-control" id="password" name="password" required>
                         </div>
-
-                        <div class="container">
-                            <div class="row">
-                                <button type="submit" class="btn btn-primary col-md-12 my-2">Login</button>
-                                <a href="{{route('signup')}}" class="col-md-12 text-center">Sign Up</a>
-                            </div>
+                       <div class="container">
+                        <div class="row">
+                            <button type="submit" class="btn btn-primary col-md-12 my-2">Register</button>
+                            <a href="{{route('login')}}" class="col-md-12 text-center">Regresar a Login</a>
                         </div>
+                       </div>
 
                     </form>
                 </div>
