@@ -49,4 +49,4 @@ Route::get('/solicitud',function(){
 
 Route::get('/postulacion',function(){
     return view('postulacion');
-})->name('postulacion')->middleware('auth');
+})->name('postulacion');

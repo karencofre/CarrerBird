@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('formacions', function (Blueprint $table) {
+        Schema::create('trabajos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nombre_formacion')->nullable();
-            $table->string('lugar_formacion')->nullable();
-            $table->string('grado_formacion')->nullable();
+            $table->string('nombre_trabajo')->nullable();
+            $table->date('fecha_inicio_trabajo')->nullable();
+            $table->date('fecha_fin_trabajo')->nullable();
+            $table->unsignedBigInteger('trabajador_id')->nullable();
+
+            $table->foreign('trabajador_id')->references('id')->on('trabajadors');
+
         });
     }
 
@@ -29,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('formacions');
+        Schema::dropIfExists('trabajos');
     }
 };

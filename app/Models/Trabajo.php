@@ -16,7 +16,5 @@ class Trabajo extends Model
         'fecha_fin_trabajo',
     ];
 
-    public function trabajador(){
-        return $this->belongsTo(Trabajador::class);
-    }
+
 }
