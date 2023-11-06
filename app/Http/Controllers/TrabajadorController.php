@@ -18,7 +18,7 @@ class TrabajadorController extends Controller
         return view('trabajador.index', ['trabajadores',$trabajadores]);
     }
 
-    public function show(){
+    public function show(string $id){
         $trabajador = Trabajador::find($id);
         return view('trabajador.show', ['trabajador',$trabajador]);
     }

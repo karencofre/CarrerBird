@@ -1,32 +1,29 @@
 @extends('app');
 @section('content')
 
-
-
-
 <div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center">Bienvenido</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{route('login')}}">
+                        @csrf
                         @if (session('success'))
-                        <h2 class="alert alert-success ">
+                     <h2 class="alert alert-success ">
                             {{ session('success') }}
                         </h2>
 
                         @endif
-                        @error('email')
+                        @error('correo')
                             <div class="alert alert-danger">
                                 {{ $message }}
                             </div>
 
                         @enderror
-                        @csrf
                         <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <label for="correo">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" required>
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>

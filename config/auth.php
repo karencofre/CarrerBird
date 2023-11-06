@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Trabajador;
 return [
 
     /*
@@ -36,9 +36,14 @@ return [
     */
 
     'guards' => [
+
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'trabajadors',
+        ],
+        'trabajadors' => [ // Agrega este guard
+            'driver' => 'session', // Puedes usar 'token' si lo prefieres
+            'provider' => 'trabajadors', // Asocia al proveedor correcto
         ],
     ],
 
@@ -60,9 +65,9 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'trabajadors' => [ // Agrega este proveedor
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => Trabajador::class, // Asegúrate de usar el modelo correcto
         ],
 
         // 'users' => [

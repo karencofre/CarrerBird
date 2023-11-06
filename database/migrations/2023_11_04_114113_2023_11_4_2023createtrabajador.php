@@ -16,9 +16,11 @@ return new class extends Migration
         Schema::create('trabajadors', function (Blueprint $table) {
             $table->bigInteger('trabajador_id')->primary();
             $table->timestamps();
+            $table->integer('active')->nullable();
             $table->string('nombre')->nullable();
             $table->string('apellido')->nullable();
             $table->string('correo')->nullable();
+            $table->string('password')->nullable();
             $table->string('renta')->nullable();
             $table->string('cargo')->nullable();
             $table->string('url_foto')->nullable();

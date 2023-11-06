@@ -4,22 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\Authenticatable as AuthContract;
 
-class Trabajador extends Model
+
+class Trabajador extends Model implements AuthContract
 {
+    use Authenticatable;
     use HasFactory;
 
     protected $fillable = [
-        'id',
-        'nombre',
-        'apellido',
+
         'correo',
-        'cargo',
-        'url_foto',
-        'puntuacion',
-        'acerca_de',
-        'trabajado_id',
-        'formacion_id',
+        'password',
+    ];
+    protected $hidden = [
+        'password',
+        'remember_token',
     ];
 
     public function formaciones(){

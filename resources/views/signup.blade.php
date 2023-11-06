@@ -10,7 +10,8 @@
             <div class="card">
                 <div class="card-header text-center">Registrarse</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('signup') }}">
+                        @csrf
                         @if (session('success'))
                         <h2 class="alert alert-success ">
                             {{ session('success') }}
@@ -24,6 +25,10 @@
 
                         @enderror
                         @csrf
+                        <div class="form-group">
+                            <label for="id_trabajador">Id Trbajador</label>
+                            <input type="text" class="form-control" id="id_trabajador" name="id_trababajdor" required>
+                        </div>
                         <div class="form-group">
                             <label for="email">Correo Electrónico</label>
                             <input type="email" class="form-control" id="email" name="email" required>
