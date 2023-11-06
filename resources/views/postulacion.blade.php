@@ -43,8 +43,12 @@
 
     <form action="">
         <div class="mb-3">
-            <label for="id_trabajador_f" class="form-label">ID de Trabajador</label>
-            <input type="text" class="form-control" id="id_trabajador_f" name="id_trabajador_f">
+
+                <label for="miSelect">Selecciona una trabajador:</label>
+                <select class="form-control" id="miSelect">
+                    <option value="opcion1">Opción 1</option>
+                </select>
+
         </div>
         <div class="mb-3">
 
@@ -69,8 +73,10 @@
 
     <form action="">
         <div class="mb-3">
-            <label for="id_trabajador_e" class="form-label">ID de Trabajador</label>
-            <input type="text" class="form-control" id="id_trabajador_e" name="id_trabajador_e">
+            <label for="miSelect">Selecciona una trabajador:</label>
+            <select class="form-control" id="miSelect">
+                <option value="opcion1">Opción 1</option>
+            </select>
         </div>
         <div class="mb-3">
             <h2>Experiencia Laboral:</h2>
