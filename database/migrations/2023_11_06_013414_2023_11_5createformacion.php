@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('nombre_formacion')->nullable();
             $table->string('lugar_formacion')->nullable();
             $table->string('grado_formacion')->nullable();
-            $table->unsignedBigInteger('trabajador_id')->nullable();
+            $table->bigInteger('trabajador')->nullable();
 
-            $table->foreign('trabajador_id')->references('id')->on('trabajadors');
+            $table->foreign('trabajador')->references('trabajador_id')->on('trabajadors');
         });
     }
 
