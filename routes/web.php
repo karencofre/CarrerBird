@@ -9,6 +9,8 @@ use App\Http\Controllers\PostulacionController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\CurriculumController;
 use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\TrabajoController;
+use App\Http\Controllers\FormacionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +35,6 @@ Route::get('/signup', function(){
 Route::post('/signup', [LoginController::class,'register']);
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 
-Route::get('/curr',[TrabajadorController::class,'index'])->name('curr');
 Route::post('/perfil',[TrabajadorController::class,'store'])->name('perfil');
 Route::get('/perfil', function(){
     return view('perfil');
@@ -46,6 +47,10 @@ Route::get('/postulacion',function(){
     return view('postulacion');
 })->name('postulacion');
 
+
+Route::get('/curr',function(){
+    return view('curriculums');
+})->name('curr');
 
 Route::resource('formacion', FormacionController::class);
 Route::resource('trabajo', TrabajoController::class);

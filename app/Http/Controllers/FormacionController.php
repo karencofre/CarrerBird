@@ -3,19 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Formacion;
 class FormacionController extends Controller
 {
     //
     public function store(Request $request){
         $formacion = new Formacion();
+        $formacion->nombre_formacion = $request->institucion;
+        $formacion->lugar_formacion = $request->lugar;
+        $formacion->grado_formacion = $request->grado;
+        $trabajadorId = $request->input('trabajador');
+        $formacion->trabajador = $trabajadorId;
         $formacion->save();
         return redirect()->route('formacion.index')->with('success', 'Formacion creado correctamente');
     }
 
     public function index(){
         $formaciones = Formacion::all();
-        return view('formacion.index', ['formaciones',$formaciones]);
+        return view('index', ['formaciones',$formaciones]);
     }
 
     public function show(){

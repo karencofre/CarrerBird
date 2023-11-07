@@ -19,7 +19,7 @@ class TrabajadorController extends Controller
         $trabajador->password = $request->password;
         $trabajador->acerca_de = $request->acercaDe;
         $trabajador->renta = $request->expectativa;
-
+        $trabajador->puntuacion =  rand(1, 100);
         $trabajador->save();
         return redirect()->route('index')->with('success', 'Trabajador creado correctamente');
     }

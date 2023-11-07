@@ -38,67 +38,51 @@
         <div class="container">
             <div class="row">
                 <button type="submit" class="btn btn-primary col-md-12 my-2">Guardar</button>
-                <button type="submit" class="btn btn-primary col-md-12">Actualizar</button>
             </div>
         </div>
 
     </form>
 
+    <h2>Formacion Academica:</h2>
     <form action="{{route('formacion.store')}}" method="POST">
+        @csrf
         <div class="mb-3">
-            @php
-            use App\Models\Trabajador;
-            $trabajadores = Trabajador::all();
 
 
-            @endphp
-                <label for="miSelect">Selecciona una trabajador:</label>
-                <select class="form-control" id="miSelect">
-                    @foreach($trabajadores as $trabajador)
-        <option value="{{ $trabajador->trabajador_id }}">{{ $trabajador->nombre . $trabajador->appellido}}</option>
-    @endforeach
-                </select>
-
-
+                <label for="trabajador">Selecciona una trabajador:</label>
+                <input type="text" class="form-control" id="trabajador" name="trabajador">
 
         </div>
+
         <div class="mb-3">
-            <h2>Formacion Academica:</h2>
             <label for="institucion" class="form-label">Institucion</label>
             <input type="text" class="form-control" id="institucion" name="institucion">
-            <label for="fecha_inicio_f" class="form-label">Fecha de inicio</label>
-            <input type="text" class="form-control" id="fecha_inicio_f" name="fecha_inicio_f">
-            <label for="fecha_fin_f" class="form-label">Fecha de fin</label>
-            <input type="text" class="form-control" id="fecha_fin_f" name="fecha_fin_f">
-            <label for="descripcion">Descripcion:</label>
-            <textarea class="form-control" id="descripcion" name="descripcion" rows="2"></textarea>
+            <label for="lugar" class="form-label">Lugar</label>
+            <input type="text" class="form-control" id="lugar" name="lugar">
+            <label for="grado" class="form-label">Grado</label>
+            <input type="text" class="form-control" id="grado" name="grado">
+
         </div>
         <div class="container">
             <div class="row">
                 <button type="submit" class="btn btn-primary col-md-12 my-2">Guardar</button>
-                <button type="submit" class="btn btn-primary col-md-12">Actualizar</button>
             </div>
         </div>
 
     </form>
 
+
+    <h2>Experiencia Laboral:</h2>
+
     <form action="{{route('trabajo.store')}}" method="POST">
+        @csrf
         <div class="mb-3">
-            @php
 
-            $trabajadores = Trabajador::all();
+                <label for="trabajador">Selecciona una trabajador:</label>
+                <input type="text" class="form-control" id="trabajador" name="trabajador">
 
-
-            @endphp
-                <label for="miSelect">Selecciona una trabajador:</label>
-                <select class="form-control" id="miSelect2">
-                    @foreach($trabajadores as $trabajador)
-        <option value="{{ $trabajador->trabajador_id }}">{{ $trabajador->nombre . $trabajador->appellido}}</option>
-    @endforeach
-                </select>
         </div>
         <div class="mb-3">
-            <h2>Experiencia Laboral:</h2>
 
             <label for="cargo" class="form-label">Cargo</label>
             <input type="text" class="form-control" id="cargo" name="cargo">
@@ -106,16 +90,14 @@
             <input type="text" class="form-control" id="fecha_inicio_e" name="fecha_inicio_e">
             <label for="fecha_fin_e" class="form-label">Fecha de fin</label>
             <input type="text" class="form-control" id="fecha_fin_e" name="fecha_fin_e">
-            <label for="descripcion">Descripcion:</label>
-            <textarea class="form-control" id="descripcion" name="descripcion" rows="2"></textarea>
+
+
         </div>
         <div class="container">
             <div class="row">
                 <button type="submit" class="btn btn-primary col-md-12 my-2">Guardar</button>
-                <button type="submit" class="btn btn-primary col-md-12">Actualizar</button>
-            </div>
+                 </div>
         </div>
-
     </form>
 </div>
 @endsection

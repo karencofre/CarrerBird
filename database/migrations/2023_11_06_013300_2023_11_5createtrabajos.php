@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre_trabajo')->nullable();
-            $table->date('fecha_inicio_trabajo')->nullable();
-            $table->date('fecha_fin_trabajo')->nullable();
+            $table->string('fecha_inicio_trabajo')->nullable();
+            $table->string('fecha_fin_trabajo')->nullable();
             $table->unsignedBigInteger('trabajador')->nullable();
 
             $table->foreign('trabajador')->references('id')->on('trabajadors');
