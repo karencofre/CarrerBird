@@ -23,7 +23,7 @@
                             <button class="form-group btn btn-danger" type="submit">Eliminar</button>
                         </form>
                     </a>
-                        <a href="{{ route('trabajador.edit', $trabajador->id) }}">
+                        <a href="{{ route('trabajador.editar', $trabajador->id) }}">
                             <button class="form-group btn btn-primary" type="submit">Editar</button>
                         </a>
            @php

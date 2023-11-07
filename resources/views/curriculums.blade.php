@@ -1,7 +1,7 @@
 @extends('app');
 
 @section('content')
-<h2>Postulantes</h2>
+<h2 class="text-center">Postulantes</h2>
 <div class="container mt-5 mb-5">
     <div class="row">
         @php
@@ -12,6 +12,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">' . $objeto["nombre"]." " . $objeto["apellido"].'</h5>
+                            <p class="card-text">Puntuacion: ' . $objeto["puntuacion"] . '</p>
                             <p class="card-text">Renta: $' . $objeto["renta"] . '</p>
                         </div>
                     </div>

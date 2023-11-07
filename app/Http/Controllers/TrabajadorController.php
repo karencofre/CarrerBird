@@ -36,24 +36,44 @@ class TrabajadorController extends Controller
 
     public function edit (string $id){
         $trabajador = Trabajador::find($id);
-        return view('curriculums', ['trabajador',$trabajador]);
+        return view('perfil', ['trabajador',$trabajador]);
     }
 
     public function update(Request $request,string $id){
         $trabajador = Trabajador::find($id);
-        $trabajador->fill($request->all());
+        $trabajador->nombre = $request->nombre;
+        $trabajador->apellido = $request->apellido;
+        $trabajador->correo = $request->correo;
+
+        $trabajador->renta = $request->renta;
         $trabajador->save();
-        return redirect()->route('curriculums')->with('success', 'Trabajador actualizado correctamente');
+        return redirect()->route('perfil')->with('success', 'Trabajador actualizado correctamente');
     }
 
     public function destroy(string $id){
         $trabajador = Trabajador::find($id);
         $trabajador->delete();
-        return redirect()->route('curriculums')->with('success', 'Trabajador eliminado correctamente');
+        return redirect()->route('perfil')->with('success', 'Trabajador eliminado correctamente');
     }
 
     public function create(){
         return view('curriculums');
+    }
+
+    public function eliminarTrabajador($id) {
+        Trabajo::where('trabajador', $id)->delete();
+        Trabajador::destroy($id);
+
+        return;
+    }
+    public function editarTrabajador($id) {
+        $trabajador = Trabajador::find($id);
+
+        if ($trabajador) {
+            return view('actualizar', compact('trabajador'));
+        } else {
+
+        }
     }
 
 }

@@ -51,6 +51,7 @@ Route::get('/postulacion',function(){
 Route::get('/curr',function(){
     return view('curriculums');
 })->name('curr');
+Route::get('trabajador/editar/{id}', [TrabajadorController::class,'editarTrabajador'])->name('trabajador.editar');
 
 Route::resource('formacion', FormacionController::class);
 Route::resource('trabajo', TrabajoController::class);
